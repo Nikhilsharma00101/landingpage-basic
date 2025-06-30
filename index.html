@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page [Basic]</title>
+
+  <!-- TAILWIND CSS -->
+  <link rel="stylesheet" href="dist/output.css">
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- FONTAWESOME CDN -->
+  <!-- Free version (no kit required) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+
+<body>
+
+  <!-- NAVBAR SECTION -->
+  <header class="bg-[#1e293b] text-white shadow-md fixed w-full z-50">
+    <div class="mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo -->
+        <a href="#" class="text-xl font-bold text-white hover:text-[#fbbf24] transition duration-300">
+          ⚖️ Advocate Sharma
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex space-x-8 text-sm font-medium">
+          <a href="#about" class="text-white hover:text-[#fbbf24] transition duration-300">About</a>
+          <a href="#practice" class="text-white hover:text-[#fbbf24] transition duration-300">Practice Areas</a>
+          <a href="#testimonials" class="text-white hover:text-[#fbbf24] transition duration-300">Testimonials</a>
+          <a href="#contact" class="text-white hover:text-[#fbbf24] transition duration-300">Contact</a>
+        </nav>
+
+        <!-- Call Button -->
+        <div class="hidden md:flex">
+          <a href="tel:+919999999999"
+            class="inline-block bg-[#fbbf24] text-black px-4 py-2 rounded-lg hover:bg-yellow-400 hover:scale-105 transition-all duration-200 font-semibold">
+            📞 Call Now
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-toggle" class="md:hidden focus:outline-none">
+          <i id="menu-icon"
+            class="fas fa-bars text-2xl text-white transition-transform duration-300 hover:rotate-90"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 bg-[#1e293b]">
+      <a href="#about" class="block py-2 text-white hover:text-[#fbbf24] transition duration-300">About</a>
+      <a href="#practice" class="block py-2 text-white hover:text-[#fbbf24] transition duration-300">Practice Areas</a>
+      <a href="#testimonials"
+        class="block py-2 text-white hover:text-[#fbbf24] transition duration-300">Testimonials</a>
+      <a href="#contact" class="block py-2 text-white hover:text-[#fbbf24] transition duration-300">Contact</a>
+      <a href="tel:+919999999999"
+        class="block mt-2 text-center bg-[#fbbf24] text-black font-semibold py-2 rounded-lg hover:bg-yellow-400 hover:scale-105 transition-all duration-200">
+        📞 Call Now
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative overflow-hidden bg-[#fdf7f2] pt-28 pb-24 px-4 md:px-8">
+    <!-- Decorative Background -->
+    <div
+      class="absolute inset-0 bg-[url('https://cdn-icons-png.flaticon.com/512/1040/1040230.png')] bg-no-repeat bg-[length:300px] bg-right-bottom opacity-5 pointer-events-none z-0">
+    </div>
+
+    <!-- Main Container -->
+    <div class="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-12 relative z-10">
+
+      <!-- Left: Text Content -->
+      <div class="md:w-1/2 text-center md:text-left">
+        <h1 class="text-4xl sm:text-5xl font-bold text-[#1e293b] leading-tight">
+          Advocate Sharma
+        </h1>
+        <p class="mt-4 text-lg text-[#374151] max-w-lg">
+          10+ Years of Expertise in Criminal, Civil, and Property Disputes. Representing clients with integrity in
+          District & High Courts.
+        </p>
+        <div class="mt-6 flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+          <a href="#contact"
+            class="px-6 py-3 bg-[#d4af37] text-white font-semibold rounded-xl shadow hover:bg-yellow-500 transition duration-200">
+            Book Appointment
+          </a>
+          <a href="#about"
+            class="px-6 py-3 border border-[#1e293b] text-[#1e293b] font-medium rounded-xl hover:bg-[#1e293b] hover:text-white transition duration-200">
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Advocate Image Card with Effects -->
+      <div class="md:w-1/2 relative">
+        <div
+          class="relative w-full max-w-md mx-auto rounded-xl overflow-hidden border border-gray-200 bg-white shadow-xl">
+
+          <!-- Advocate Image with isolated hover -->
+          <img src="https://cdn-icons-png.flaticon.com/512/2922/2922688.png" alt="Advocate Illustration"
+            class="w-full transition-transform duration-500 hover:scale-105 hover:shadow-2xl">
+
+          <!-- Badge -->
+          <div class="absolute bottom-0 left-0 bg-gradient-to-r from-[#d4af37] to-yellow-400 text-white text-sm px-4 py-1 rounded-tr-xl shadow-md tracking-wide font-medium 
+      hover:brightness-110 hover:scale-105 transition duration-300">
+            🏛 Delhi High Court • 10+ Yrs Experience
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- Appointment CTA Strip -->
+    <div id="appointment"
+      class="max-w-5xl mx-auto mt-16 bg-white rounded-2xl shadow-xl p-6 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8 relative z-10 border border-[#f3e8dc]">
+      <div class="flex-1 text-center md:text-left">
+        <h2 class="text-2xl font-semibold text-[#1e293b]">
+          Need Legal Advice? Book a Free Initial Consultation
+        </h2>
+        <p class="mt-2 text-[#374151]">Quick, confidential, and effective help for your legal issue.</p>
+      </div>
+      <a href="#contact"
+        class="mt-4 md:mt-0 px-6 py-3 bg-[#d4af37] text-white font-medium rounded-xl hover:bg-yellow-500 transition">
+        Book Now
+      </a>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="bg-[#1e293b] text-white py-24 px-4 md:px-8" id="about">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
+
+      <!-- Left: Image -->
+      <div class="w-full md:w-1/2">
+        <div class="relative w-72 mx-auto md:mx-0 group">
+          <!-- Framed Border -->
+          <div
+            class="absolute inset-0 rounded-lg border border-gray-200 shadow-[inset_0_0_0_2px_rgba(255,255,255,0.05)] group-hover:shadow-[inset_0_0_0_2px_#fbbf24] transition-all duration-500 z-10 pointer-events-none">
+          </div>
+
+          <!-- Main Image -->
+          <img src="https://cdn-icons-png.flaticon.com/512/1995/1995429.png" alt="Advocate Sharma"
+            class="relative rounded-lg shadow-2xl ring-1 ring-gray-700 ring-opacity-30 transition-transform duration-500 group-hover:-translate-y-2 group-hover:brightness-110 z-20">
+        </div>
+      </div>
+
+
+
+      <!-- Right: Text -->
+      <div class="w-full md:w-1/2 text-center md:text-left">
+        <h2 class="text-4xl font-semibold text-white mb-6 border-b-2 border-[#fbbf24] inline-block pb-2">
+          About Advocate Sharma
+        </h2>
+
+        <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+          Advocate Sharma is a seasoned legal professional with over <span class="text-[#fbbf24] font-medium">12 years
+            of experience</span> in providing legal counsel and courtroom representation. He has handled a wide array of
+          cases ranging from civil and criminal matters to property disputes and corporate affairs.
+        </p>
+
+        <p class="text-lg text-gray-400 mb-6 leading-relaxed">
+          Known for his strategic approach, ethical conduct, and strong advocacy skills, he is committed to delivering
+          justice with integrity. His practice is built on trust, clarity, and consistent results.
+        </p>
+
+        <ul class="space-y-3 text-gray-300 text-base mb-6">
+          <li class="flex items-start gap-3">
+            <span class="text-[#fbbf24] text-lg">•</span>
+            Member of the Bar Council of India
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-[#fbbf24] text-lg">•</span>
+            Specializes in Property, Criminal & Family Law
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-[#fbbf24] text-lg">•</span>
+            Focused on ethics, discretion, and results
+          </li>
+        </ul>
+
+        <div class="mt-6 border-l-4 border-[#fbbf24] pl-4 text-gray-200 italic">
+          "Justice is not an act of charity — it's a fundamental right I strive to uphold every day."
+        </div>
+
+        <p class="mt-3 font-medium text-[#fbbf24]">– Advocate Sharma</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRACTICE SECTION -->
+  <section class="bg-white py-24 px-4 md:px-8" id="practice">
+    <div class="max-w-7xl mx-auto text-center">
+
+      <!-- Section Heading -->
+      <h2 class="text-4xl font-semibold text-[#1e293b] mb-4">
+        Practice Areas
+      </h2>
+      <p class="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
+        Specializing in a wide range of legal matters with deep expertise, strategic representation, and client-first
+        solutions.
+      </p>
+
+      <!-- Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+
+        <!-- Card 1 -->
+        <div class="p-6 border rounded-lg shadow-sm hover:shadow-md transition-all duration-300 bg-gray-50">
+          <h3 class="text-xl font-semibold text-[#1e293b] mb-2">⚖️ Civil Law</h3>
+          <p class="text-gray-600">Resolution of disputes between individuals or organizations including contracts,
+            damages, and obligations.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="p-6 border rounded-lg shadow-sm hover:shadow-md transition-all duration-300 bg-gray-50">
+          <h3 class="text-xl font-semibold text-[#1e293b] mb-2">🔒 Criminal Defense</h3>
+          <p class="text-gray-600">Strong representation in criminal cases, bail, and trial proceedings with full legal
+            support.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="p-6 border rounded-lg shadow-sm hover:shadow-md transition-all duration-300 bg-gray-50">
+          <h3 class="text-xl font-semibold text-[#1e293b] mb-2">🏠 Property Disputes</h3>
+          <p class="text-gray-600">Expert handling of land disputes, property claims, partition suits, and real estate
+            matters.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="p-6 border rounded-lg shadow-sm hover:shadow-md transition-all duration-300 bg-gray-50">
+          <h3 class="text-xl font-semibold text-[#1e293b] mb-2">👨‍👩‍👧‍👦 Family Law</h3>
+          <p class="text-gray-600">Legal help with divorce, custody, maintenance, and domestic issues with empathy and
+            confidentiality.</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="p-6 border rounded-lg shadow-sm hover:shadow-md transition-all duration-300 bg-gray-50">
+          <h3 class="text-xl font-semibold text-[#1e293b] mb-2">🏢 Corporate & Commercial</h3>
+          <p class="text-gray-600">Advisory and representation for businesses including agreements, arbitration, and
+            compliance.</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="p-6 border rounded-lg shadow-sm hover:shadow-md transition-all duration-300 bg-gray-50">
+          <h3 class="text-xl font-semibold text-[#1e293b] mb-2">📄 Consumer Complaints</h3>
+          <p class="text-gray-600">Representation in consumer forums and legal action against fraud, delay, or unfair
+            trade practices.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL SECTION -->
+  <section class="bg-gradient-to-br from-[#f8fafc] to-[#e2e8f0] py-24 px-4 md:px-8" id="testimonials">
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Section Heading -->
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-semibold text-[#1e293b] mb-4">
+          What Clients Say
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Trusted by individuals and businesses alike for honest advice, powerful representation, and dependable
+          results.
+        </p>
+      </div>
+
+      <!-- Testimonials Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Testimonial 1 -->
+        <div class="bg-white border border-gray-200 rounded-lg shadow-sm p-6">
+          <p class="text-gray-700 italic mb-4">"Advocate Sharma helped me recover my property from a false claim. His
+            clarity and confidence made the whole process stress-free."</p>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-gray-200 text-[#1e293b] flex items-center justify-center font-bold">RK
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-[#1e293b]">Rakesh Kumar</p>
+              <p class="text-xs text-gray-500">Property Case, Delhi</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-white border border-gray-200 rounded-lg shadow-sm p-6">
+          <p class="text-gray-700 italic mb-4">"A highly professional lawyer. Helped me resolve a false dowry complaint
+            and saved my career. Extremely grateful."</p>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-gray-200 text-[#1e293b] flex items-center justify-center font-bold">AS
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-[#1e293b]">Amit Singh</p>
+              <p class="text-xs text-gray-500">Criminal Defense</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-white border border-gray-200 rounded-lg shadow-sm p-6">
+          <p class="text-gray-700 italic mb-4">"We were facing delays in our flat possession. He helped us win the
+            consumer case in record time. Highly recommended."</p>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-gray-200 text-[#1e293b] flex items-center justify-center font-bold">MS
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-[#1e293b]">Meera Sharma</p>
+              <p class="text-xs text-gray-500">Consumer Forum</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section id="contact" class="bg-white py-24 px-4 md:px-8">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+
+      <!-- Left: Contact Info -->
+      <div>
+        <h2 class="text-4xl font-semibold text-[#1e293b] mb-4">Book a Consultation</h2>
+        <p class="text-lg text-gray-600 mb-6">
+          Whether it's legal advice, document review, or full representation — get in touch to schedule a one-on-one
+          meeting with Advocate Sharma.
+        </p>
+
+        <ul class="space-y-4 text-gray-700">
+          <li class="flex items-start gap-3">
+            <span class="text-[#fbbf24]">📞</span>
+            <a href="tel:+919999999999" class="hover:underline text-[#1e293b]">+91 99999 99999</a>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-[#fbbf24] text-xl">📍</span>
+            <span><strong>Office:</strong> B-123, District Court Complex, New Delhi</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-[#fbbf24] text-xl">⏰</span>
+            <span><strong>Timings:</strong> Mon–Sat, 10:00 AM – 6:00 PM</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-[#fbbf24]">📧</span>
+            <a href="mailto:advsharma@lawfirm.com" class="hover:underline text-[#1e293b]">advsharma@lawfirm.com</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right: Booking Form -->
+      <form class="space-y-6 bg-gray-50 p-6 rounded-lg shadow-md">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+          <input type="text"
+            class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#fbbf24]"
+            placeholder="Enter your name" required>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+          <input type="tel"
+            class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#fbbf24]"
+            placeholder="+91 98765 43210" required>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Email (optional)</label>
+          <input type="email"
+            class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#fbbf24]"
+            placeholder="you@example.com">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Message / Concern</label>
+          <textarea
+            class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#fbbf24]"
+            rows="4" placeholder="Briefly describe your issue..."></textarea>
+        </div>
+        <button type="submit"
+          class="w-full bg-[#fbbf24] text-black font-semibold py-3 rounded-md hover:bg-yellow-400 transition">
+          📩 Request Appointment
+        </button>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#1e293b] text-white py-10 px-4 md:px-8">
+    <div class=" mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+
+      <!-- Column 1: Brand -->
+      <div>
+        <h3 class="text-2xl font-bold mb-2">⚖️ Advocate Sharma</h3>
+        <p class="text-gray-300">
+          Delivering justice with ethics, clarity, and conviction. Expert in Civil, Criminal, and Family Law.
+        </p>
+      </div>
+
+      <!-- Column 2: Quick Links -->
+      <div>
+        <h4 class="text-xl font-semibold mb-3">Quick Links</h4>
+        <ul class="space-y-2 text-gray-300">
+          <li><a href="#about" class="hover:text-[#fbbf24] transition">About</a></li>
+          <li><a href="#practice" class="hover:text-[#fbbf24] transition">Practice Areas</a></li>
+          <li><a href="#contact" class="hover:text-[#fbbf24] transition">Book Appointment</a></li>
+          <li><a href="mailto:advsharma@lawfirm.com" class="hover:text-[#fbbf24] transition">Email Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Contact -->
+      <div>
+        <h4 class="text-xl font-semibold mb-3">Contact</h4>
+        <ul class="space-y-2 text-gray-300">
+          <li>📞 <a href="tel:+919999999999" class="hover:text-[#fbbf24] transition">+91 99999 99999</a></li>
+          <li>📧 <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=advsharma@lawfirm.com&su=Appointment%20Request&body=Hello%20Sir%2C%0A"
+              target="_blank" class="hover:text-[#fbbf24] transition">
+              advsharma@lawfirm.com
+            </a>
+          </li>
+          <li>📍 B-123, District Court, New Delhi</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom Line -->
+    <div class="border-t border-gray-600 mt-10 pt-6 text-center text-gray-400 text-sm">
+      © 2025 Advocate Sharma. All rights reserved. | Bar Council Registration No. D/1234/2012
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
